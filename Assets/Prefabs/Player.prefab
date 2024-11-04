@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 8034776593581750515}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 5
   disparo: {fileID: 6202128777895146219, guid: 893c5fb06b3aaaf49b4ba7178373b66c, type: 3}
+  spawnPoint: {fileID: 0}
 --- !u!1 &9136101356917187580
 GameObject:
   m_ObjectHideFlags: 0

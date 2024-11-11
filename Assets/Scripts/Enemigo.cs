@@ -7,10 +7,12 @@ public class Enemigo : MonoBehaviour
 {
     [SerializeField] private float velociad;
     [SerializeField] private float vidas;
+    [SerializeField] private GameObject balaintanciada;
+    [SerializeField] private GameObject PuntoSalida;
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(SpawnearBala)();
     }
 
     // Update is called once per frame
@@ -27,12 +29,29 @@ public class Enemigo : MonoBehaviour
             Destroy(this.gameObject);
 
         }
+
+        
+
+    
+
     }
-    
-    
 
 
-    
+
+    private IEnumerator SpawnearBala()
+    {
+
+        while (true)
+        {
+            Instantiate(balaintanciada, PuntoSalida.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(3);
+        }
+
+
+
+    }
+
+
 
 
 
